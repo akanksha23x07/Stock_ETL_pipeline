@@ -1,7 +1,7 @@
 # Stock Data ETL Pipeline
 
 ## 📌 Overview
-This project automates the extraction, transformation, and loading (ETL) of stock market data from the **Alpha Vantage API** into a **PostgreSQL** database hosted on **AWS RDS**.  
+This project automates the extraction, transformation, and loading (ETL) of stock market data from the **Alpha Vantage API** into a **PostgreSQL** database hosted on **AWS RDS** and orchastrated using **Apache Airflow**.  
 It retrieves both:
 - Stock metadata (company details, market metrics, etc.)
 - Daily stock prices (open, high, low, close, volume)
