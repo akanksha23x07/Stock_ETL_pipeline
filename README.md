@@ -44,7 +44,16 @@ The pipeline is:
 ├── extraction.log # Log file
 └── README.md # Documentation
 
-## 🔑 Environment Variables
+
+## Setup & Run
+1. Clone
+git clone [https://github.com/akanksha23x07/Stock-ETL-pipeline.git](https://github.com/akanksha23x07/Stock_ETL_pipeline.git)
+cd stock-etl-pipeline
+
+2. Install Dependencies
+pip install -r requirements.txt
+
+3. Environment Variables
 Create a `.env` file in the project root with: 
 ALPHA_VANTAGE_API_KEY=your_api_key
 DB_NAME=your_db_name
@@ -52,15 +61,6 @@ DB_HOST=your_rds_endpoint
 DB_USER=your_db_user
 DB_PASS=your_db_password
 DB_PORT=5432
-
-🛠️ Setup & Run
-1. Clone
-git clone [https://github.com/akanksha23x07/Stock-ETL-pipeline.git](https://github.com/akanksha23x07/Stock_ETL_pipeline.git)
-
-cd stock-etl-pipeline
-
-3. Install Dependencies
-pip install -r requirements.txt
 
 4. Run with Docker and Airflow
 docker-compose up -d
