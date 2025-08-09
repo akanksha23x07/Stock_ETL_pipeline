@@ -55,7 +55,7 @@ DB_PORT=5432
 
 🛠️ Setup & Run
 1. Clone
-git clone https://github.com/your-repo/stock-etl-pipeline.git
+git clone https://github.com/akanksha23x07/Stock-ETL-pipeline.git
 cd stock-etl-pipeline
 
 2. Install Dependencies
@@ -72,8 +72,8 @@ for default stock list --> python alphavantage_stock_etl.py
 for specific company stock --> python alphavantage_stock_etl.py AAPL
 
 ## Database Schema
-Stock_data ---> <img width="221" height="199" alt="image" src="https://github.com/user-attachments/assets/954e90c1-bf1a-4f00-a0ee-bd640f453d2f" />
-stock_metadata ---> <img width="316" height="670" alt="image" src="https://github.com/user-attachments/assets/47e2a2c3-04c0-40ce-8fd4-aba45c376386" />
+<img width="221" height="199" alt="image" src="https://github.com/user-attachments/assets/954e90c1-bf1a-4f00-a0ee-bd640f453d2f" />
+<img width="316" height="670" alt="image" src="https://github.com/user-attachments/assets/47e2a2c3-04c0-40ce-8fd4-aba45c376386" />
 
 ## Sample DB screenshots
 <img width="1675" height="389" alt="image" src="https://github.com/user-attachments/assets/5d7a181f-dfea-4caf-abaf-7f0af6c7da7b" />
