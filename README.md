@@ -11,6 +11,7 @@ The pipeline is:
 - **Orchestrated** with Apache Airflow
 - **Scheduled** to run daily at **11:00 AM IST**
 
+#### NOTE: Alpha_vantage API has a limit of 25 requests per day, make sure to use a new API or try changing request IP
 ---
 
 ## ⚙️ Tech Stack
