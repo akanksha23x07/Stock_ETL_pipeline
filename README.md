@@ -34,15 +34,7 @@ The pipeline is:
 ---
 
 ## 📂 Project Structure
-.
-├── airflow/dags/ # Airflow DAGs and ETL script
-├── airflow/logs/dags # Airflow logs
-├── scripts/ # ETL Python scripts
-├── requirements.txt # Python dependencies
-├── Dockerfile # Docker setup
-├── docker-compose.yml # Airflow + Postgres services
-├── extraction.log # Log file
-└── README.md # Documentation
+<img width="707" height="310" alt="image" src="https://github.com/user-attachments/assets/fe63c927-4ce5-4974-9767-7be2f36df090" />
 
 
 ## Setup & Run
