@@ -46,6 +46,7 @@ The pipeline is:
 
 ## 🔑 Environment Variables
 Create a `.env` file in the project root with: 
+
 ALPHA_VANTAGE_API_KEY=your_api_key
 DB_NAME=your_db_name
 DB_HOST=your_rds_endpoint
@@ -55,7 +56,7 @@ DB_PORT=5432
 
 🛠️ Setup & Run
 1. Clone
-git clone https://github.com/akanksha23x07/Stock-ETL-pipeline.git
+git clone [https://github.com/akanksha23x07/Stock-ETL-pipeline.git](https://github.com/akanksha23x07/Stock_ETL_pipeline.git)
 cd stock-etl-pipeline
 
 2. Install Dependencies
