@@ -1,0 +1,84 @@
+version: '3'
+
+networks:
+  airflow-network:
+    driver: bridge
+
+services:
+  8byte-airflow:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: 8byte-airflow:latest
+    volumes:
+      - ./airflow:/opt/airflow
+    ports:
+      - "8080:8080"
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow_password@postgresdb/airflow_db
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    command: airflow standalone
+    depends_on:
+      - postgresdb
+    networks:
+      - airflow-network
+
+  postgresdb:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow_password
+      POSTGRES_DB: airflow_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - airflow-network
+
+volumes:
+  pgdata:
+
+
+
+
+
+
+
+
+
+
+
+
+# version: '3'
+
+# services:
+#   8byte-airflow:
+#     build:
+#       context: .
+#       dockerfile: dockerfile
+#     image: 8byte-airflow:latest
+#     volumes:
+#       - ./airflow:/opt/airflow
+#     ports:
+#       - "8080:8080"
+#     environment:
+#       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow_password@postgresdb/airflow_db
+#       AIRFLOW__CORE__EXECUTOR: LocalExecutor
+#     command: airflow standalone
+#     depends_on:
+#       - postgresdb   # Make sure airflow waits for postgres
+
+#   postgresdb:
+#     image: postgres:latest
+#     environment:
+#       POSTGRES_USER: airflow
+#       POSTGRES_PASSWORD: airflow_password
+#       POSTGRES_DB: airflow_db
+#     ports:
+#       - "5431:5432"
+#     volumes:
+#       - pgdata:/var/lib/postgresql/data
+
+# volumes:
+#   pgdata:

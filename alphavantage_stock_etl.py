@@ -25,11 +25,11 @@ logger = logging.getLogger(__name__)
 # ---- Load environment variables ----
 load_dotenv()
 alphavantege_api_key = os.getenv("ALPHA_VANTAGE_API_KEY")
-db_name = os.getenv("DB_NAME")
-db_host = os.getenv("DB_HOST")
-db_user = os.getenv("DB_USER")
-db_pass = os.getenv("DB_PASS")
-db_port = os.getenv("DB_PORT")
+db_name="airflow_db"
+db_host="postgresdb"
+db_user="airflow"
+db_pass="airflow_password"
+db_port="5432"
 
 """ Database Connection """
 conn = psycopg2.connect(
