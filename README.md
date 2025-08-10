@@ -40,8 +40,8 @@ The pipeline is:
 
 ## Setup & Run
 1. Clone
-   a. git clone [https://github.com/akanksha23x07/Stock-ETL-pipeline.git](https://github.com/akanksha23x07/Stock_ETL_pipeline.git)
-   b. cd stock-etl-pipeline
+   - a. git clone [https://github.com/akanksha23x07/Stock-ETL-pipeline.git](https://github.com/akanksha23x07/Stock_ETL_pipeline.git)
+   - b. cd stock-etl-pipeline
 
 2. Install Dependencies
    a. create requirements.text
