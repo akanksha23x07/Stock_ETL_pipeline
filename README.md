@@ -40,38 +40,34 @@ The pipeline is:
 
 ## Setup & Run
 1. Clone
-   
-a. git clone [https://github.com/akanksha23x07/Stock-ETL-pipeline.git](https://github.com/akanksha23x07/Stock_ETL_pipeline.git)
+   a. git clone [https://github.com/akanksha23x07/Stock-ETL-pipeline.git](https://github.com/akanksha23x07/Stock_ETL_pipeline.git)
+   b. cd stock-etl-pipeline
 
-b. cd stock-etl-pipeline
+2. Install Dependencies
+   a. create requirements.text
+      -dotenv
+      -pandas
+      -psycopg2-binary
 
-3. Install Dependencies
-   
-a. create requirements.text
--dotenv
--pandas
--psycopg2-binary
+   b. pip install -r requirements.txt
 
-b. pip install -r requirements.txt
+3. Environment Variables
+   Create a `.env` file in the project root with: 
+      ALPHA_VANTAGE_API_KEY=your_api_key
+      
 
-5. Environment Variables
-Create a `.env` file in the project root with: 
-ALPHA_VANTAGE_API_KEY=your_api_key
-DB_NAME=your_db_name
-DB_HOST=your_rds_endpoint
-DB_USER=your_db_user
-DB_PASS=your_db_password
-DB_PORT=5432
+4. Run with Docker and Airflow
+   a. postgres-docker-compose up --build -d
+   b. Create directories dags and logs inside airflow folder, copy files alphavantage_stock_etl.py and etl_dag.py inside dags directory & .env inside the airflow directory
+   c. open http://localhost:8080, airflow credentials will be present inside airflow folder (airflow/simple_auth_manager_passwords.json.generated)
+    <img width="1675" height="493" alt="image" src="https://github.com/user-attachments/assets/5b042390-b5c2-45ea-9d94-cb3f7ad3b617" />
+   d. To change the companies to extract data for, head to variables inside admin and add in comma separated manner without spaces
+   <img width="1594" height="178" alt="image" src="https://github.com/user-attachments/assets/8cfffa8d-4d60-4efb-97e0-acaee5a3a620" />
 
-6. Run with Docker and Airflow
-a. docker-compose up --build -d
-b. Create directories dags and logs inside airflow folder, copy files alphavantage_stock_etl.py and etl_dag.py inside dags directory & .env inside the airflow directory
-c. open http://localhost:8080, airflow credentials will be present inside airflow folder (airflow/simple_auth_manager_passwords.json.generated)
-<img width="1675" height="493" alt="image" src="https://github.com/user-attachments/assets/5b042390-b5c2-45ea-9d94-cb3f7ad3b617" />
-
-7. Run Locally
-for default stock list --> python alphavantage_stock_etl.py
-for specific company stock --> python alphavantage_stock_etl.py AAPL
+  
+5. Run Locally
+   for default stock list --> python alphavantage_stock_etl.py
+   for specific company stock --> python alphavantage_stock_etl.py AAPL
 
 ## Database Schema
 <img width="221" height="199" alt="image" src="https://github.com/user-attachments/assets/954e90c1-bf1a-4f00-a0ee-bd640f453d2f" />
